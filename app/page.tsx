@@ -1,9 +1,13 @@
+import Banner from "@/components/Banner";
+import Input from "@/components/Input";
+
 const HomePage: React.FC = () => {
 
   return (
-    <>
-      <h1 className="font-josefin font-bold">ToDo</h1>
-    </>
+    <main className="bg-very_dark_blue h-screen font-josefin">
+      <Banner />
+      <Input />
+    </main>
   )
 }
 
