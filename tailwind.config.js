@@ -21,16 +21,20 @@ module.exports = {
         "check_backgroud": "",
         "very_light_gray": "#fafafa",
         "very_light_grayish_blue": "#e4e5f1",
-        "Light_grayish_blue": "#d2d3db",
+        "light_grayish_blue": "#d2d3db",
         "dark_grayish_blue": "#9394a5",
         "very_dark_grayish_blue": "#484b6a",
         "very_dark_blue": "#161722",
         "very_dark_desaturated_blue": "#25273c",
-        "light_grayish_blue": "	#cacde8",
+        "light_grayish_blue_dark": "	#cacde8",
         "light_grayish_blue_hover": "#e4e5f1",
         "dark_grayish_blue_dark": "#777a92",
         "very_dark_grayish_blue_dark": "#4d5066",
         "very_dark_grayish_blue_dark_hover": "#393a4c"
+      },
+      height: {
+        '375': '375px',
+        '1440': '1400px'
       },
       screens: {
         "desktop": { 'max': '1440px' },
