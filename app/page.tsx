@@ -1,13 +1,16 @@
 import Banner from "@/components/Banner";
 import Input from "@/components/Input";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 const HomePage: React.FC = () => {
 
   return (
-    <main className="bg-very_dark_blue h-screen font-josefin">
-      <Banner />
-      <Input />
-    </main>
+    <ThemeContextProvider>
+      <main className="bg-very_dark_blue h-screen font-josefin">
+        <Banner />
+        <Input />
+      </main>
+    </ThemeContextProvider>
   )
 }
 
