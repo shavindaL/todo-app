@@ -3,7 +3,12 @@
 import { createContext, useState } from "react";
 import { ChildComponents } from "@/interfaces/ChildComponents";
 
-export const ThemeContext = createContext<[string, () => void] | null>(null);
+interface ThemeCon {
+    theme: string;
+    changeTheme: () => void;
+}
+
+export const ThemeContext = createContext<ThemeCon | null>(null);
 
 const ThemeContextProvider = ({ children }: ChildComponents) => {
 
@@ -16,7 +21,7 @@ const ThemeContextProvider = ({ children }: ChildComponents) => {
     }
 
     return (
-        <ThemeContext.Provider value={[theme, changeTheme]}>
+        <ThemeContext.Provider value={{ theme, changeTheme }}>
             {children}
         </ThemeContext.Provider>
     )

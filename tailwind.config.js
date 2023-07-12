@@ -37,8 +37,14 @@ module.exports = {
         '1440': '1400px'
       },
       screens: {
-        "desktop": { 'max': '1440px' },
+        "desktop": { 'max': '1920px' },
         "mobile": { 'max': '375px' }
+      },
+      backgroundImage: {
+        "desktop-light": "url('/bg-desktop-light.jpg')",
+        'desktop-dark': "url('/bg-desktop-dark.jpg')",
+        "mobile-light": "url('/bg-mobile-light.jpg')",
+        'mobile-dark': "url('/bg-mobile-dark.jpg')",
       }
     },
   },
