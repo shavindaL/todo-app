@@ -1,5 +1,5 @@
-import { Josefin_Sans } from 'next/font/google'
 import './globals.css'
+import ThemeContextProvider from '@/context/ThemeContext'
 
 export default function RootLayout({
   children,
@@ -12,7 +12,10 @@ export default function RootLayout({
         <title>ToDo App</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </head>
-      <body>{children}</body>
+      <ThemeContextProvider>
+        <body>{children}</body>
+      </ThemeContextProvider>
+
     </html>
   )
 }
