@@ -2,11 +2,7 @@
 
 import { createContext, useState } from "react";
 import { ChildComponents } from "@/interfaces/ChildComponents";
-
-interface ThemeCon {
-    theme: string;
-    changeTheme: () => void;
-}
+import ThemeCon from "@/interfaces/ThemeCon";
 
 export const ThemeContext = createContext<ThemeCon | null>(null);
 
@@ -16,8 +12,6 @@ const ThemeContextProvider = ({ children }: ChildComponents) => {
 
     const changeTheme = () => {
         theme === 'light' ? setTheme('dark') : setTheme('light');
-        console.log(theme);
-
     }
 
     return (
