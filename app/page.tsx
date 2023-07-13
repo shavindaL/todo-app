@@ -1,16 +1,22 @@
+'use client'
+
 import Banner from "@/components/Banner";
 import Input from "@/components/Input";
-import ThemeContextProvider from "@/context/ThemeContext";
+import { ThemeContext } from "@/context/ThemeContext";
+import ThemeCon from "@/interfaces/ThemeCon";
+import { useContext } from "react";
 
 const HomePage: React.FC = () => {
 
+  const context = useContext<ThemeCon | null>(ThemeContext);
+
+  const { theme } = context!
+
   return (
-    <ThemeContextProvider>
-      <main className="bg-very_dark_blue h-screen font-josefin">
-        <Banner />
-        <Input />
-      </main>
-    </ThemeContextProvider>
+    <main className={`h-screen font-josefin ${theme === 'light' ? 'bg-very_light_gray' : 'bg-very_dark_blue'}`}>
+      <Banner />
+      <Input />
+    </main>
   )
 }
 

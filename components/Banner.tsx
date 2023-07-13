@@ -1,12 +1,10 @@
 'use client'
 
 import { ThemeContext } from "@/context/ThemeContext";
-import { Context, useContext } from "react";
+import ThemeCon from "@/interfaces/ThemeCon";
+import { useContext } from "react";
 
-interface ThemeCon {
-    theme: string;
-    changeTheme: () => void;
-}
+
 
 const Banner: React.FC = () => {
     const context = useContext<ThemeCon | null>(ThemeContext);
@@ -17,7 +15,7 @@ const Banner: React.FC = () => {
     return (
         <div className="relative">
             <div
-                className={`top-0 fixed w-screen h-375 ${theme === 'light' ? 'desktop:bg-desktop-light' : 'desktop:bg-desktop-dark'} ${theme === 'light' ? 'mobile:bg-desktop-light' : 'mobile:bg-desktop-dark'} bg-cover`}
+                className={`top-0 fixed w-screen h-375 ${theme === 'light' ? 'desktop:bg-desktop-light' : 'desktop:bg-desktop-dark'} ${theme === 'light' ? 'mobile:bg-mobile-light' : 'mobile:bg-mobile-dark'} bg-cover`}
             />
             <div className="relative top-16 w-1/2 h-10 left-1/4">
                 <h1 className="absolute left-0 inline-block font-bold text-4xl text-white">T O D O</h1>
