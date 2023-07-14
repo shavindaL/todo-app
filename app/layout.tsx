@@ -1,3 +1,4 @@
+import NoteContextProvider from '@/context/NoteContext'
 import './globals.css'
 import ThemeContextProvider from '@/context/ThemeContext'
 
@@ -13,7 +14,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" />
       </head>
       <ThemeContextProvider>
-        <body>{children}</body>
+        <NoteContextProvider>
+          <body>{children}</body>
+        </NoteContextProvider>
       </ThemeContextProvider>
 
     </html>
