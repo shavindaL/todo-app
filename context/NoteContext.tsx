@@ -3,22 +3,15 @@
 import { ChildComponents } from "@/interfaces/ChildComponents";
 import INote from "@/interfaces/INote";
 import { createContext, useState } from "react"
+import INoteContext from "../interfaces/INoteContext";
 
-interface INoteCon {
-    notes: INote[];
-    addNote: (note: INote) => void;
 
-}
 
-export const NoteContext = createContext<INoteCon | null>(null);
+export const NoteContext = createContext<INoteContext | null>(null);
 
 const NoteContextProvider = ({ children }: ChildComponents) => {
-    const note: INote = {
-        todoId: 1,
-        todoNote: "First Note",
-        isCompleted: false
-    }
-    const [notes, setNotes] = useState<INote[]>([note]);
+    
+    const [notes, setNotes] = useState<INote[]>([]);
 
     const addNote: (note: INote) => void = (note: INote) => {
         setNotes([...notes, note])

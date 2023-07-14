@@ -4,7 +4,7 @@ import ThemeCon from '@/interfaces/ThemeCon';
 import { useContext } from 'react';
 import INote from '@/interfaces/INote';
 import { NoteContext } from '@/context/NoteContext';
-import INoteContext from '@/context/INoteContext';
+import INoteContext from '@/interfaces/INoteContext';
 
 
 
