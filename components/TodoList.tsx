@@ -14,7 +14,7 @@ const TodoList: React.FC = () => {
     const noteContext = useContext<INoteContext | null>(NoteContext);
     
     const { theme } = themeContext!;
-    const { notes } = noteContext!;
+    const { notes, changeNoteStatus } = noteContext!;
 
     return (
         <div className={`absolute left-1/4 mt-20 rounded-2xl ${theme === 'light' ? 'bg-very_light_gray' : 'bg-very_dark_desaturated_blue'} drop-shadow-xl w-1/2`}>
