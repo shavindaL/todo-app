@@ -17,8 +17,7 @@ module.exports = {
       colors: {
         "bright_blue": "#3a7bfd",
         "gradient-left": "#57ddff",
-        "gradient_right": "rgb(192, 88, 243)",
-        "check_backgroud": "",
+        "gradient_right": "#c058f3",
         "very_light_gray": "#fafafa",
         "very_light_grayish_blue": "#e4e5f1",
         "light_grayish_blue": "#d2d3db",
