@@ -17,8 +17,8 @@ const Banner: React.FC = () => {
             <div
                 className={`top-0 fixed w-screen h-375 ${theme === 'light' ? 'desktop:bg-desktop-light mobile:bg-mobile-light' : 'desktop:bg-desktop-dark mobile:bg-mobile-dark'} bg-cover`}
             />
-            <div className="relative top-16 w-1/2 h-10 left-1/4">
-                <h1 className="absolute left-0 inline-block font-bold text-4xl text-white">T O D O</h1>
+            <div className="relative top-16 w-1/2 h-16 left-1/4">
+                <h1 className="absolute left-0 inline-block font-bold text-6xl text-white">T O D O</h1>
                 <button className="absolute right-0" onClick={changeTheme}>
                     {theme === 'light' ?
                         <svg className="" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
