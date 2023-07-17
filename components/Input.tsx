@@ -26,10 +26,9 @@ const Input: React.FC = () => {
 
     return (
         <div className="relative h-20 w-1/2 top-16 left-1/4 mobile:left-14 mt-10">
-            <div className={`${theme === 'light' ? 'bg-very_light_gray' : 'bg-very_dark_desaturated_blue'} absolute rounded-2xl w-full flex justify-center px-4`}>
+            <div className={`${theme === 'light' ? 'bg-very_light_gray' : 'bg-very_dark_desaturated_blue'} absolute rounded-xl w-full flex justify-center px-4`}>
                 <div className="w-fit py-4 px-4">
                     <button className={`w-8 h-8  text-lg rounded-full  border-2 hover:cursor-pointer flex align-middle items-center ${theme === 'light' ? 'bg-very_light_gray border-very_light_grayish_blue' : 'bg-very_dark_desaturated_blue border-very_dark_grayish_blue_dark_hover'}`} />
-
                 </div>
                 <form className="ml-30 h-16 w-11/12 rounded-r-2xl" onSubmit={handleSubmit}>
                     <input
